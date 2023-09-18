@@ -1,3 +1,3 @@
-const anotherName = "Ilham";
-const greeting = `Hello, ${anotherName}`;
+const varia = "Ilham";
+const greeting = `Hello, ${varia}`;
 console.log(greeting); // "Hello, Ilham"
