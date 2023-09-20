@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQube_LocalServer'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'Juice-Shop-AzureDevOPS_Juice-Shop-AzureDevOPS_AYqxvqVHQwoaR0EBJGra'
+    cliSources: '.'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -17,3 +24,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_11_X64'
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
