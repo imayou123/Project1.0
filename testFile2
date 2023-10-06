@@ -1,0 +1,5 @@
+if (x < 0) {
+  new Error("x must be nonnegative"); // Noncompliant: Creating an error without throwing it
+}
+
+If (x>0) {If (x>0) {If (x>0) {If (x>0) {}}}}
